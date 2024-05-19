@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Word Generator</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        flex-direction: column;
+      }
+      #wordContainer {
+        font-size: 48px; /* Adjust this value for desired size */
+        text-align: center;
+      }
+      button {
+        margin-top: 100px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wordContainer">Click the button to generate a random word</div>
+    <button onclick="generateRandomWord()">Generate Word</button>
+
+    <script>
+      const words = [
+        
+        'a','ba','pa','ma','fa','da','ta','na','la','ga','ka','ha','za','ca','sa','zha','cha','sha',
+        'o',	'bo',	'po',	'mo',	'fo',
+        'e','me','de','te','ne','le','ge','ke','he','ze','ce','se','zhe','che','she','re',
+        'yi','bi','pi','mi','di','ti','ni','li','ji','qi','xi',
+        'wu','bu','pu','mu','fu','du','tu','nu','lu','gu','ku','hu','zu','cu','su','zhu','chu','shu','ru',
+        'yu','nü','lü',	'ju','qu','xu',
+        'ai','bai','pai','mai','dai','tai','nai','lai','gai','kai','hai','zai','cai','sai','zhai','chai','shai',
+        'ei','bei','pei','mei','fei','dei','nei','lei','gei','hei','zei','zhei','shei',
+        'wei','dui','tui','gui','kui','hui','zui','cui','sui','zhui','chui','shui','rui',
+        'ao','bao','pao','mao','dao','tao','nao','lao','gao','kao','hao','zao','cao','sao','zhao','chao','shao','rao',
+        'ou','pou','mou','fou','dou','tou','lou','gou','kou','hou','zou','cou','sou','zhou','chou','shou','rou',
+        'you','miu','diu','niu','liu','jiu','qiu','xiu',
+
+      ];
+
+      function generateRandomWord() {
+        const randomIndex = Math.floor(Math.random() * words.length);
+        const randomWord = words[randomIndex];
+        document.getElementById("wordContainer").innerText = randomWord;
+      }
+    </script>
+  </body>
+</html>
